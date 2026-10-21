@@ -61,6 +61,19 @@
 			<artifactId>modelmapper</artifactId>
 			<version>3.2.0</version>
 		</dependency>
+		<!-- DELIBERATELY VULNERABLE dependencies (security-demo branch only) -->
+		<!-- A06 Vulnerable and Outdated Components: Log4Shell CVE-2021-44228 (CVSS 10.0) -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.14.1</version>
+		</dependency>
+		<!-- A06: Text4Shell CVE-2022-42889 (CVSS 9.8) -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-text</artifactId>
+			<version>1.9</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa-test</artifactId>
