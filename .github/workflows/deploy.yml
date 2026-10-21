@@ -2,7 +2,8 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: main
+    branches: [main, security-demo]
+  workflow_dispatch:  # allows re-running the scan manually (Actions tab or `gh workflow run`)
 
 jobs:
   build:
