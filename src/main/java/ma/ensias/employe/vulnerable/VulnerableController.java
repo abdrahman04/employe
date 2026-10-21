@@ -24,7 +24,7 @@ import java.util.List;
 
 /**
  * DELIBERATELY VULNERABLE endpoints, used only to test SonarCloud detection.
- * Never merge this class into main.
+ * Test/lab code only: never deploy to a real environment.
  */
 @RestController
 @CrossOrigin(origins = "*") // VULN A05 Security Misconfiguration: permissive CORS
