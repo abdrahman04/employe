@@ -1,0 +1,15 @@
+# Local MySQL replacing MySQL Workbench setup (Etape 1, step 6).
+# Workbench can still connect to localhost:3306 with the credentials below.
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: employe-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: employedemo
+      MYSQL_USER: employe
+      MYSQL_PASSWORD: employe
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
